@@ -1,0 +1,46 @@
+\section{Novelty and Contributions}
+We found a published article by Ogunpola et al. (2024), \textit{Machine Learning-Based Predictive Models for Detection of Cardiovascular Diseases} \cite{ogunpola2024machine}, which investigates machine learning models for cardiovascular disease detection using the Cleveland Heart Disease Dataset and the MIMIC-III database. The authors emphasize the challenge of data imbalance in healthcare datasets and apply techniques such as resampling and cost-sensitive learning to address it.
+
+This project focuses solely on the Cleveland Heart Disease Dataset, and we will compare our results with those obtained in the article. Their study evaluates several classifiers, including K-Nearest Neighbors, Support Vector Machines (SVM), Logistic Regression (LR), Convolutional Neural Networks (CNN), Gradient Boost, XGBoost, and Random Forest. In contrast, we have focused on evaluating only Logistic Regression (LR), Support Vector Machines (SVM), and Multi-Layer Perceptron (MLP).
+
+We will compare performance metrics such as accuracy, precision, recall, and F1 score from our models with those reported in the literature.
+
+\begin{table}[H]
+    \centering
+    \caption{Our Results} 
+    \begin{tabular}{||c| c c c c||} 
+     \hline
+     & Accuracy & F1 Score & Recall & Precision \\
+     \hline\hline
+     LR & 0.883 & 0.863 & 0.786 & 0.957 \\ 
+     \hline
+    SVC & 0.900 & 0.885 & 0.821 & 0.958  \\
+    \hline
+    \hline
+    \end{tabular}
+    \label{tab:tab_our results}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Results from Article} 
+    \begin{tabular}{||c| c c c c||} 
+     \hline
+     & Accuracy & F1 Score & Recall & Precision \\
+     \hline\hline
+     LR & 0.885 & 0.885 & 0.844 & 0.931 \\ 
+     \hline
+    SVC & 0.787 & 0.794 & 0.781 & 0.807 \\
+    \hline
+    \hline
+    \end{tabular}
+    \label{tab:tab_our results}
+\end{table}
+
+By analyzing the performance metrics (accuracy, F1 score, recall, and precision) from our models and the results in the article, we can make the following observations:
+\\
+The performance of \textbf{Logistic Regression (LR)} in our model is very similar to the one reported in the article, with a marginal difference in accuracy (our result is slightly lower by 0.002). Our precision (0.957) is slightly better, but their recall (0.844) and F1 score (0.885) are higher, indicating that their model was able to identify more truly positive cases and had a better overall balance between precision and recall.
+
+Our \textbf{SVC} model significantly outperforms the \textbf{SVC} model from the article in all metrics. Our model shows a much higher accuracy (0.900) and precision (0.958), suggesting that the SVC model in our project is more effective at identifying true positives while maintaining a low rate of false positives. Additionally, our recall (0.821) is higher than the article's model (0.781), which indicates that our model performs slightly better in identifying actual positive cases.
+
+ Our models show strong performance, but the differences in the results indicate areas for potential improvement, especially in handling data imbalance and optimizing recall. Techniques such as resampling and cost-sensitive learning, as used in the article and could be useful to enhance performance, where recall can be further improved. Additionally, feature selection and further hyperparameter tuning may also help in refining the models for better overall performance.
